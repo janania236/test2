@@ -2,30 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday Nischay! 🎉</title>
-  <!-- Load confetti library for fireworks -->
+  <title>Happy Birthday 🎉</title>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Fireworks canvas (hidden initially) -->
-<canvas id="fireworks"></canvas>
-
-<!-- Start page -->
-<div id="start">
+<!-- PAGE 1 -->
+<div id="page1" class="center">
   <h1>🎂 Are you the birthday boy? 🎂</h1>
   <button onclick="startParty()">YES 🎉</button>
-  <button onclick="notYou()">NO 😏</button>
+  <button onclick="alert('Nice try 😏')">NO</button>
 </div>
 
-<!-- Party page (hidden initially) -->
-<div id="party" class="hidden">
-  <h1>🎆 HAPPY BIRTHDAY to my favorite boy, NISCHAYYYYYY! 🎆</h1>
-  <img src="photos/nischay.jpeg" alt="Nischay" class="birthday-photo">
+<!-- PAGE 2 -->
+<div id="page2" class="center hidden">
+  <h1>🎆 Happy Birthday to my favorite boy, Nischay! 🎆</h1>
+  <img src="photos/nischay.jpeg" class="photo">
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="center hidden">
+  <h1>🎂 It’s time to cut the cake!</h1>
+  <div id="cake">🎂</div>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="center hidden">
+  <h1>✨ Make a wish ✨</h1>
+  <input type="text" placeholder="Type your wish here 💖">
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="center hidden">
+  <h1>🔥 Blow the candles!</h1>
+  <div id="candles">🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️</div>
+  <button onclick="blowCandles()">Blow Candles</button>
+</div>
+
+<!-- PAGE 6 -->
+<div id="page6" class="center hidden">
+  <h1>🍰 Let’s cut the cake!</h1>
+  <button onclick="cutCake()">Cut the Cake</button>
+</div>
+
+<!-- PAGE 7 -->
+<div id="page7" class="center hidden">
+  <h1>💖 Happy Birthday once again! 💖</h1>
+  <p>
+    May God bless you with abundance, happiness, and success.  
+    May all your wishes come true ✨
+  </p>
+  <img src="photos/nischay.jpeg" class="photo">
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
