@@ -1,86 +1,57 @@
-/* Reset defaults */
-body, html {
+body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
-  overflow-x: hidden;
+  background: #111;
+  color: white;
 }
 
-/* Fireworks canvas */
-#fireworks {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-  display: none; /* hidden initially */
-}
-
-/* Start page */
-#start {
+.center {
   text-align: center;
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
-#start h1 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-#start button {
+button {
   padding: 15px 30px;
-  font-size: 1.2rem;
+  font-size: 18px;
   margin: 10px;
   cursor: pointer;
   border: none;
   border-radius: 8px;
-  background-color: #ff4081;
+  background: #ff4081;
   color: white;
-  transition: transform 0.2s;
 }
 
-#start button:hover {
-  transform: scale(1.1);
-}
-
-/* Party section hidden initially */
 .hidden {
   display: none;
 }
 
-/* Birthday message */
-#party h1 {
-  text-align: center;
-  font-size: 3rem;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: all 1s ease;
-}
-
-/* Zoom in effect for text */
-.show-text {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Photo styling */
-.birthday-photo {
-  display: block;
-  margin: 20px auto;
+.photo {
   width: 300px;
   border-radius: 15px;
-  opacity: 1;
-  transform: scale(1);
-  transition: all 1s ease;
+  margin-top: 20px;
+  animation: pop 1s ease;
 }
 
-/* Zoom in effect for photo */
-.show-photo {
-  opacity: 1;
-  transform: scale(1);
+#cake {
+  font-size: 120px;
+  margin-top: 20px;
+  animation: pop 1s ease;
 }
 
+#candles {
+  font-size: 30px;
+  margin: 20px;
+}
+
+input {
+  padding: 15px;
+  font-size: 16px;
+  width: 300px;
+  border-radius: 8px;
+  border: none;
+}
+
+@keyframes pop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
