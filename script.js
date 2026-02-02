@@ -1,7 +1,10 @@
 // When YES is clicked
 function startParty() {
-  // Hide start page
+  playHappyBirthday();   // ← ADD THIS LINE
+
   document.getElementById("start").classList.add("hidden");
+  ...
+}
 
   // Show party section
   const partyDiv = document.getElementById("party");
@@ -47,5 +50,16 @@ function startFireworks() {
       origin: { x: Math.random(), y: Math.random() * 0.6 }
     }));
   }, 250);
+}
+
+
+function playHappyBirthday() {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+  const o = ctx.createOscillator();
+  o.type = "sine";
+  o.frequency.value = 440;
+  o.connect(ctx.destination);
+  o.start();
+  o.stop(ctx.currentTime + 0.6);
 }
 
